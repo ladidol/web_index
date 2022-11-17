@@ -17,8 +17,8 @@ body {
 .card {
   display: flex;
   width: 600px;
+  max-width: calc(100vw - 64px);
   height: 370px;
-  margin: 0 32px;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 3px 6px rgba($color: #000, $alpha: 15%);
@@ -42,8 +42,6 @@ body {
 
   .me {
     .avatar {
-      width: 100px;
-      height: 100px;
       padding: 12px;
       margin-bottom: 12px;
       border: 2px solid rgba($color: #000, $alpha: 7.5%);
@@ -116,6 +114,7 @@ body {
 @media screen and (max-width: 512px) {
   .card {
     flex-direction: column;
+    max-width: calc(100vw - 64px);
     height: fit-content;
 
     .left {
