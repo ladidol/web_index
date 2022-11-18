@@ -1,5 +1,8 @@
+import { Noto_Color_Emoji } from '@next/font/google';
 import Head from 'next/head';
 import styles from './index.module.scss';
+
+const emoji = Noto_Color_Emoji({ weight: '400', subsets: ['emoji'] });
 
 export default function Index() {
   return (
@@ -12,7 +15,7 @@ export default function Index() {
         <p>
           <span className={styles.hello}>
             <span className={styles.text}>Hello!</span>
-            <span className={styles.emoji}>👋🏼</span>
+            <span className={`${styles.emoji} ${emoji.className}`}>👋🏼</span>
           </span>
         </p>
         <p>I&apos;m CSZongzi.</p>
